@@ -1,0 +1,25 @@
+{
+  "name": "Youtube DL",
+  "description": "download videos from youtube!",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "host_permissions": [
+    "https://*.googlevideo.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  }
+}
